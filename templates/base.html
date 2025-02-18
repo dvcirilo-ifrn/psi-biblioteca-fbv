@@ -13,13 +13,13 @@
     <header class="sticky-top bg-light border-bottom shadow-sm">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <a class="navbar-brand fs-4" href="{% url 'index' %}">
             <i class="bi-book-half" style="color: blue; height: 80;"></i>
             Biblioteca
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -32,17 +32,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Meus Livros</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
               {% endif %}
             </ul>
             <form class="d-flex me-lg-2" role="search">
@@ -53,14 +42,28 @@
                 </button>
               </div>
             </form>
-            <div class="text-center mt-2 mt-lg-0">
-              {% if request.user.is_authenticated %}
-              <button type="button" class="btn btn-danger">Sair</button>
-              {% else %}
-              <button type="button" class="btn btn-primary">Login</button>
-              {% endif %}
-            </div>
           </div>
+          {% if request.user.is_authenticated %}
+          <div class="dropdown mt-2 mt-lg-0">
+            <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              {% if request.user.avatar %}
+              <img src="{{ request.user.avatar.url }}" alt="mdo" width="32" height="32" class="ms-1 rounded-circle">
+              {% else %}
+              <img src="{% static 'biblioteca/placeholder/avatar.png' %}" alt="mdo" width="32" height="32" class="ms-1 rounded-circle">
+              {% endif %}
+            </a>
+            <ul class="dropdown-menu text-small shadow mt-2 dropdown-menu-end" style="">
+              <li><a class="dropdown-item" href="#">Perfil</a></li>
+              <li><a class="dropdown-item" href="#">Alterar Senha</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="dropdown-item" type="submit">Sair</button></li>
+            </ul>
+          </div>
+          {% else %}
+          <div class="text-center mt-2 mt-lg-0">
+            <button type="button" class="btn btn-primary">Login</button>
+          </div>
+          {% endif %}
         </div>
       </nav>
     </header>

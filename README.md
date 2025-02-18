@@ -4,17 +4,22 @@ Material de apoio da disciplina de [Programação de Sistemas para Internet](htt
 ## Informações
 - Sistema simples de lista de livros;
     - Usuários avulsos podem ver a lista e detalhes dos livros;
+    - Há a funcionalidade de busca por titulo/autor/gênero;
     - O usuário avulso pode se cadastrar;
-    - O usuário comum logado pode adicionar livros aos seus favoritos;
+    - O usuário comum logado pode adicionar/remover livros aos seus favoritos;
+    - O usuário comum logado pode listar seus favoritos;
     - O administrador pode gerenciar livros e usuários.
-- O objetivo é demonstrar o uso do AJAX com [*jQuery*](https://jquery.com/) e [Django](https://www.djangoproject.com/);
-- *Front-end* feito usando apenas blocos de exemplo do [Bootstrap 5](https://getbootstrap.com/);
-- *Back-end* seguindo os exemplos da documentação do Django e usando FBVs (*Function Based Views*)
+- O objetivo é demonstrar o uso do AJAX com [Django](https://www.djangoproject.com/);
 
 ## Implementação
+- *Front-end* feito usando apenas blocos de exemplo do [Bootstrap 5](https://getbootstrap.com/);
+- [*jQuery*](https://jquery.com/) para manipulação do DOM e requisições;
+    - Perspectiva de mudar para JS "*Vanilla*";
+- *Back-end* seguindo os exemplos da documentação do Django e usando FBVs (*Function Based Views*)
+- Nomenclatura em português para facilitar a compreensão;
 - Pastas de `templates` e `static` na raiz, com sub-pastas para cada *app*, evitando conflitos;
 - 3 *apps*:
-    - livraria: app principal
+    - biblioteca: app principal
     - dashboard: páginas de gerenciamento do sistema
     - contas: gerenciamento de usuários
 - Autenticação do Django;

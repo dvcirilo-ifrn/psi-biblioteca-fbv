@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
     'crispy_forms',
     'crispy_bootstrap5',
+    'contas',
+    'biblioteca',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
@@ -101,6 +103,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Autenticação
+AUTH_USER_MODEL = "contas.Usuario"
 
 
 # Internationalization

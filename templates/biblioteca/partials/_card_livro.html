@@ -4,7 +4,7 @@
     {% if livro.capa %}
     <img src="{{ livro.capa.url }}" class="card-img-top border border-2" alt="capa">
     {% else %}
-    <img src="{% static 'app/placeholder/capa.png' %}" class="card-img-top w-75 mx-auto border border-2" alt="capa">
+    <img src="{% static 'biblioteca/placeholder/capa.png' %}" class="card-img-top w-75 mx-auto border border-2" alt="capa">
     {% endif %}
   <div class="card-body">
     <h5 class="card-title">{{ livro.titulo }}</h5>

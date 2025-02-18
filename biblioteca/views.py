@@ -12,4 +12,4 @@ def index(request):
 
          }
     ]
-    return render(request, "app/index.html", {"livros": livros})
+    return render(request, "biblioteca/index.html", {"livros": livros})
