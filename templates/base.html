@@ -26,17 +26,17 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'biblioteca:index' %}">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Livros</a>
+                <a class="nav-link" href="{% url 'biblioteca:livros' %}">Livros</a>
               </li>
               {% if request.user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="#">Meus Livros</a>
+                <a class="nav-link" href="{% url 'biblioteca:meus-livros' %}">Meus Livros</a>
               </li>
               {% endif %}
             </ul>
-            <form class="d-flex me-lg-2" role="search">
+            <form action="{% url 'biblioteca:pesquisa' %}" class="d-flex me-lg-2" role="search">
               <div class="input-group">
-                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" aria-describedby="button-busca">
+                <input class="form-control" type="search" placeholder="Pesquisar" name="q" aria-label="Pesquisar" aria-describedby="button-busca">
                 <button class="btn btn-outline-secondary" type="submit" id="button-busca">
                   <i class="bi-search"></i>
                 </button>
@@ -71,6 +71,18 @@
         </div>
       </nav>
     </header>
+
+    {% if messages %}
+    <div>
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
 
     <main>
     {% block content %}

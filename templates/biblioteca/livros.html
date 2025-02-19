@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Livros{% endblock %}
+{% block content %}
+<div class="container d-flex">
+  <h3 class="display-3 me-auto"> Livros </h3>
+  <form class="d-flex align-items-center">
+    <select class="form-select me-2" name="f" id="generos-select" aria-label="Categorias">
+      <option value="">Categorias</option>
+      {% for chave, valor in opcoes %}
+      <option value="{{ chave }}" {% if chave == request.GET.f %}selected{% endif %}>{{ valor }}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" class="btn btn-primary" value="Filtrar">
+  </form>
+</div>
+<section class="album py-5 bg-body-tertiary">
+  {% include "biblioteca/partials/_galeria_livros.html" %}
+</section>
+{% endblock %}

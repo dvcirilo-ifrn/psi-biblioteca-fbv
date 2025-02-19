@@ -1,28 +1,50 @@
 {% load static %}
 <div class="col">
-  <div class="card shadow-sm" style="width: 18rem;">
-    {% if livro.capa %}
-    <img src="{{ livro.capa.url }}" class="card-img-top border border-2" alt="capa">
-    {% else %}
-    <img src="{% static 'biblioteca/placeholder/capa.png' %}" class="card-img-top w-75 mx-auto border border-2" alt="capa">
-    {% endif %}
-  <div class="card-body">
-    <h5 class="card-title">{{ livro.titulo }}</h5>
-    <div class="card-text">
-      <p>{{ livro.autor }}</p>
-      <p>{{ livro.genero }}</p>
-    </div>
-    <div class="d-flex justify-content-center gap-2 mt-auto">
-      <a href="#" class="btn btn-primary" role="button">Detalhar</a>
-      {% if request.user.is_authenticated %}
-      <a href="#" class="btn btn-outline-danger" role="button">
-      {% else %}
-      <a class="btn btn-outline-danger disabled" role="button" aria-disabled="true">
-      {% endif %}
-        <span>{{ livro.favoritos }}</span>
-        <i class="bi bi-heart{{ livro.favoritado|yesno:'-fill,' }} ms-1"></i>
-      </a>
+  <div class="card mb-3 shadow-sm" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        {% if livro.capa %}
+        <img src="{{ livro.capa.url }}" class="img-fluid rounded-start w-100 h-100 object-fit-cover" alt="capa">
+        {% else %}
+        <img src="{% static 'biblioteca/placeholder/capa.png' %}" class="card-img-top w-75 mx-auto border border-2" alt="capa">
+        {% endif %}
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h4 class="card-title">{{ livro.titulo }}</h4>
+          <div class="card-text">
+            <p>{{ livro.autor }}</p>
+            <p>{{ livro.get_genero_display }}</p>
+            <p>{{ livro.ano }}</p>
+          </div>
+          <div class="d-flex justify-content-center gap-2 mt-auto">
+            <a href="{% url 'biblioteca:detalhar_livro' livro.id %}" class="btn btn-primary" role="button">Detalhar</a>
+            {% if request.user.is_authenticated %}
+            <form action="{% url 'biblioteca:favoritar' livro.id %}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-outline-danger">
+                <span>{{ livro.favoritos.count }}</span>
+                {% if request.user in livro.favoritos.all %}
+                <i class="bi bi-heart-fill ms-1"></i>
+                {% else %}
+                <i class="bi bi-heart ms-1"></i>
+                {% endif %}
+              </button>
+            </form>
+            {% else %}
+            <a class="btn btn-outline-danger disabled" role="button" aria-disabled="true">
+              <span>{{ livro.favoritos.count }}</span>
+              {% if request.user in livro.favoritos.all %}
+              <i class="bi bi-heart-fill ms-1"></i>
+              {% else %}
+              <i class="bi bi-heart ms-1"></i>
+              {% endif %}
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-</div>
+

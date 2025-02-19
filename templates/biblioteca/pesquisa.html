@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Resultado da Pesquisa{% endblock %}
+{% block content %}
+<div class="container">
+<h3 class="display-3"> Resultado da Pesquisa </h3>
+</div>
+<section class="album py-5 bg-body-tertiary">
+  {% include "biblioteca/partials/_galeria_livros.html" %}
+</section>
+{% endblock %}

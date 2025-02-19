@@ -20,6 +20,7 @@ class Livro(models.Model):
     ano = models.PositiveIntegerField()
     genero = models.CharField(max_length=2, choices=GENEROS)
     capa = models.ImageField(upload_to="biblioteca/capas/", blank=True)
+    sinopse = models.TextField(blank=True)
     favoritos = models.ManyToManyField(settings.AUTH_USER_MODEL)
 
     def __str__(self):

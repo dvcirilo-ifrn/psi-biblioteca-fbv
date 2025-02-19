@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Meus Livros{% endblock %}
+{% block content %}
+<div class="container">
+<h3 class="display-3"> Meus Livros </h3>
+</div>
+<section class="album py-5 bg-body-tertiary">
+  {% include "biblioteca/partials/_galeria_livros.html" %}
+</section>
+{% endblock %}

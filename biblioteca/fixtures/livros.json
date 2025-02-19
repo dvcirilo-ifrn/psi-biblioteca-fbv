@@ -1,0 +1,242 @@
+[
+  {
+    "model": "biblioteca.Livro",
+    "pk": 1,
+    "fields": {
+      "titulo": "Dom Casmurro",
+      "autor": "Machado de Assis",
+      "ano": 1899,
+      "genero": "RO",
+      "capa": "biblioteca/capas/1.png",
+      "sinopse": "Dom Casmurro é um romance que explora temas como ciúme, traição e ambiguidade, narrado por Bentinho, que suspeita que seu filho não é seu e que foi traído por sua esposa Capitu."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 2,
+    "fields": {
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "ano": 1949,
+      "genero": "FI",
+      "capa": "biblioteca/capas/2.png",
+      "sinopse": "1984 é uma distopia que retrata um regime totalitário onde o governo controla todos os aspectos da vida, incluindo o pensamento, através da vigilância constante e da manipulação da verdade."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 3,
+    "fields": {
+      "titulo": "O Pequeno Príncipe",
+      "autor": "Antoine de Saint-Exupéry",
+      "ano": 1943,
+      "genero": "FI",
+      "capa": "biblioteca/capas/3.png",
+      "sinopse": "O Pequeno Príncipe é uma fábula poética que conta a história de um príncipe que viaja por diversos planetas, refletindo sobre a natureza humana, o amor e a amizade."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 4,
+    "fields": {
+      "titulo": "O Alquimista",
+      "autor": "Paulo Coelho",
+      "ano": 1988,
+      "genero": "RO",
+      "capa": "biblioteca/capas/4.png",
+      "sinopse": "O Alquimista narra a jornada de Santiago, um jovem pastor, em busca de seu sonho e de um tesouro escondido, explorando temas como destino, sonhos e a importância de seguir o coração."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 5,
+    "fields": {
+      "titulo": "Steve Jobs",
+      "autor": "Walter Isaacson",
+      "ano": 2011,
+      "genero": "BI",
+      "capa": "biblioteca/capas/5.png",
+      "sinopse": "Esta biografia de Steve Jobs, baseada em entrevistas com ele e pessoas próximas, revela a vida e a personalidade complexa do cofundador da Apple, sua visão e seu impacto na tecnologia."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 6,
+    "fields": {
+      "titulo": "A Revolução dos Bichos",
+      "autor": "George Orwell",
+      "ano": 1945,
+      "genero": "FI",
+      "capa": "biblioteca/capas/6.png",
+      "sinopse": "A Revolução dos Bichos é uma sátira política que retrata a luta dos animais de uma fazenda contra a opressão humana, mas que acaba reproduzindo as mesmas desigualdades que tentavam superar."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 7,
+    "fields": {
+      "titulo": "Sapiens: Uma Breve História da Humanidade",
+      "autor": "Yuval Noah Harari",
+      "ano": 2011,
+      "genero": "TE",
+      "capa": "biblioteca/capas/7.png",
+      "sinopse": "Sapiens explora a história da humanidade, desde os primeiros hominídeos até as sociedades modernas, abordando temas como evolução, cultura e o impacto da tecnologia."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 8,
+    "fields": {
+      "titulo": "Cem Anos de Solidão",
+      "autor": "Gabriel García Márquez",
+      "ano": 1967,
+      "genero": "RO",
+      "capa": "biblioteca/capas/8.png",
+      "sinopse": "Cem Anos de Solidão é um marco do realismo mágico, contando a saga da família Buendía ao longo de gerações na cidade fictícia de Macondo, explorando temas como amor, solidão e destino."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 9,
+    "fields": {
+      "titulo": "Eu, Robô",
+      "autor": "Isaac Asimov",
+      "ano": 1950,
+      "genero": "FI",
+      "capa": "biblioteca/capas/9.png",
+      "sinopse": "Eu, Robô é uma coletânea de contos que explora a relação entre humanos e robôs, introduzindo as famosas Três Leis da Robótica e refletindo sobre ética e tecnologia."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 10,
+    "fields": {
+      "titulo": "O Homem Mais Rico da Babilônia",
+      "autor": "George S. Clason",
+      "ano": 1926,
+      "genero": "TE",
+      "capa": "biblioteca/capas/10.png",
+      "sinopse": "Este livro oferece conselhos financeiros através de parábolas ambientadas na antiga Babilônia, ensinando princípios como poupança, investimento e gestão de recursos."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 11,
+    "fields": {
+      "titulo": "A Metamorfose",
+      "autor": "Franz Kafka",
+      "ano": 1915,
+      "genero": "FI",
+      "capa": "biblioteca/capas/11.png",
+      "sinopse": "A Metamorfose conta a história de Gregor Samsa, que acorda transformado em um inseto gigante, explorando temas como alienação, identidade e a condição humana."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 12,
+    "fields": {
+      "titulo": "O Senhor dos Anéis",
+      "autor": "J.R.R. Tolkien",
+      "ano": 1954,
+      "genero": "FI",
+      "capa": "biblioteca/capas/12.png",
+      "sinopse": "O Senhor dos Anéis é uma épica jornada para destruir um anel maligno e salvar a Terra-média, explorando temas como amizade, coragem e a luta entre o bem e o mal."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 13,
+    "fields": {
+      "titulo": "O Grande Gatsby",
+      "autor": "F. Scott Fitzgerald",
+      "ano": 1925,
+      "genero": "RO",
+      "capa": "biblioteca/capas/13.png",
+      "sinopse": "O Grande Gatsby retrata a vida de Jay Gatsby, um milionário misterioso, e sua obsessão por Daisy Buchanan, explorando temas como o sonho americano, riqueza e decadência."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 14,
+    "fields": {
+      "titulo": "Crime e Castigo",
+      "autor": "Fiódor Dostoiévski",
+      "ano": 1866,
+      "genero": "RO",
+      "capa": "biblioteca/capas/14.png",
+      "sinopse": "Crime e Castigo narra a história de Raskólnikov, um estudante que comete um assassinato e lida com as consequências psicológicas e morais de seu ato."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 15,
+    "fields": {
+      "titulo": "O Nome do Vento",
+      "autor": "Patrick Rothfuss",
+      "ano": 2007,
+      "genero": "FI",
+      "capa": "biblioteca/capas/15.png",
+      "sinopse": "O Nome do Vento é a história de Kvothe, um homem lendário que conta sua jornada desde a infância até se tornar um herói, repleta de magia, música e mistério."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 16,
+    "fields": {
+      "titulo": "A Menina que Roubava Livros",
+      "autor": "Markus Zusak",
+      "ano": 2005,
+      "genero": "RO",
+      "capa": "biblioteca/capas/16.png",
+      "sinopse": "A Menina que Roubava Livros conta a história de Liesel, uma jovem que encontra refúgio nos livros durante a Segunda Guerra Mundial, sob a narração da Morte."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 17,
+    "fields": {
+      "titulo": "O Silmarillion",
+      "autor": "J.R.R. Tolkien",
+      "ano": 1977,
+      "genero": "FI",
+      "capa": "biblioteca/capas/17.png",
+      "sinopse": "O Silmarillion é uma coleção de mitos e lendas que compõem o universo de Tolkien, explorando a criação do mundo e as primeiras eras da Terra-média."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 18,
+    "fields": {
+      "titulo": "O Hobbit",
+      "autor": "J.R.R. Tolkien",
+      "ano": 1937,
+      "genero": "FI",
+      "capa": "biblioteca/capas/18.png",
+      "sinopse": "O Hobbit segue a jornada de Bilbo Bolseiro, que parte em uma aventura para recuperar um tesouro guardado por um dragão, encontrando magia, perigos e amizades pelo caminho."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 19,
+    "fields": {
+      "titulo": "O Retrato de Dorian Gray",
+      "autor": "Oscar Wilde",
+      "ano": 1890,
+      "genero": "RO",
+      "capa": "biblioteca/capas/19.png",
+      "sinopse": "O Retrato de Dorian Gray conta a história de um homem que permanece jovem enquanto seu retrato envelhece, explorando temas como vaidade, moralidade e decadência."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 20,
+    "fields": {
+      "titulo": "O Sol é para Todos",
+      "autor": "Harper Lee",
+      "ano": 1960,
+      "genero": "RO",
+      "capa": "biblioteca/capas/20.png",
+      "sinopse": "O Sol é para Todos aborda temas de racismo e injustiça através da história de Atticus Finch, um advogado que defende um homem negro acusado injustamente de um crime."
+    }
+  }
+]
