@@ -238,5 +238,125 @@
       "capa": "biblioteca/capas/20.png",
       "sinopse": "O Sol é para Todos aborda temas de racismo e injustiça através da história de Atticus Finch, um advogado que defende um homem negro acusado injustamente de um crime."
     }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 21,
+    "fields": {
+      "titulo": "O Iluminado",
+      "autor": "Stephen King",
+      "ano": 1977,
+      "genero": "TE",
+      "capa": "biblioteca/capas/21.png",
+      "sinopse": "O Iluminado é um clássico do terror, contando a história de Jack Torrance, que se torna o zelador de um hotel isolado durante o inverno, onde eventos sobrenaturais começam a acontecer."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 22,
+    "fields": {
+      "titulo": "A Culpa é das Estrelas",
+      "autor": "John Green",
+      "ano": 2012,
+      "genero": "RO",
+      "capa": "biblioteca/capas/22.png",
+      "sinopse": "A Culpa é das Estrelas é uma emocionante história de amor entre dois adolescentes que se conhecem em um grupo de apoio para pacientes com câncer."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 23,
+    "fields": {
+      "titulo": "Neuromancer",
+      "autor": "William Gibson",
+      "ano": 1984,
+      "genero": "FI",
+      "capa": "biblioteca/capas/23.png",
+      "sinopse": "Neuromancer é um marco da ficção científica cyberpunk, seguindo o hacker Case em uma missão perigosa no ciberespaço."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 24,
+    "fields": {
+      "titulo": "O Poder do Hábito",
+      "autor": "Charles Duhigg",
+      "ano": 2012,
+      "genero": "TE",
+      "capa": "biblioteca/capas/24.png",
+      "sinopse": "O Poder do Hábito explora a ciência por trás da formação de hábitos e como eles podem ser transformados para melhorar a vida pessoal e profissional."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 25,
+    "fields": {
+      "titulo": "O Código Da Vinci",
+      "autor": "Dan Brown",
+      "ano": 2003,
+      "genero": "RO",
+      "capa": "biblioteca/capas/25.png",
+      "sinopse": "O Código Da Vinci é um thriller que segue o professor Robert Langdon em uma caça ao tesouro que envolve segredos históricos e religiosos."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 26,
+    "fields": {
+      "titulo": "Fundação",
+      "autor": "Isaac Asimov",
+      "ano": 1951,
+      "genero": "FI",
+      "capa": "biblioteca/capas/26.png",
+      "sinopse": "Fundação é um clássico da ficção científica que narra a queda de um império galáctico e os esforços para preservar o conhecimento humano."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 27,
+    "fields": {
+      "titulo": "A Arte da Guerra",
+      "autor": "Sun Tzu",
+      "ano": 0,
+      "genero": "TE",
+      "capa": "biblioteca/capas/27.png",
+      "sinopse": "A Arte da Guerra é um tratado militar clássico que oferece estratégias e táticas para conflitos, aplicáveis também em negócios e vida pessoal."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 28,
+    "fields": {
+      "titulo": "O Morro dos Ventos Uivantes",
+      "autor": "Emily Brontë",
+      "ano": 1847,
+      "genero": "RO",
+      "capa": "biblioteca/capas/28.png",
+      "sinopse": "O Morro dos Ventos Uivantes é uma história de amor obsessivo e vingança, ambientada nos sombrios pântanos de Yorkshire."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 29,
+    "fields": {
+      "titulo": "Duna",
+      "autor": "Frank Herbert",
+      "ano": 1965,
+      "genero": "FI",
+      "capa": "biblioteca/capas/29.png",
+      "sinopse": "Duna é uma obra-prima da ficção científica, explorando temas como política, religião e ecologia no deserto planeta de Arrakis."
+    }
+  },
+  {
+    "model": "biblioteca.Livro",
+    "pk": 30,
+    "fields": {
+      "titulo": "O Poder do Agora",
+      "autor": "Eckhart Tolle",
+      "ano": 1997,
+      "genero": "TE",
+      "capa": "biblioteca/capas/30.png",
+      "sinopse": "O Poder do Agora é um guia espiritual que ensina a importância de viver no presente e como isso pode transformar a vida."
+    }
   }
 ]
