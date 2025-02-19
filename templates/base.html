@@ -47,9 +47,9 @@
           <div class="dropdown mt-2 mt-lg-0">
             <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               {% if request.user.avatar %}
-              <img src="{{ request.user.avatar.url }}" alt="mdo" width="32" height="32" class="ms-1 rounded-circle">
+              <img src="{{ request.user.avatar.url }}" alt="mdo" width="32" height="32" class="ms-1 rounded-circle object-fit-cover">
               {% else %}
-              <img src="{% static 'biblioteca/placeholder/avatar.png' %}" alt="mdo" width="32" height="32" class="ms-1 rounded-circle">
+              <img src="{% static 'biblioteca/placeholder/avatar.png' %}" alt="mdo" width="32" height="32" class="ms-1 rounded-circle object-fit-cover">
               {% endif %}
             </a>
             <ul class="dropdown-menu text-small shadow mt-2 dropdown-menu-end" style="">

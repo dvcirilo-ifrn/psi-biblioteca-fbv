@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required, permission_required
 from django.core.paginator import Paginator
 from django.contrib import messages
 from .models import Livro
@@ -20,10 +21,6 @@ def livros(request):
     livros_paginados = paginator.get_page(numero_da_pagina)  # Pega a página específica
     return render(request, "biblioteca/livros.html", {"livros": livros_paginados, "opcoes": Livro.GENEROS.items()})
 
-def meus_livros(request):
-    livros = Livro.objects.filter(favoritos__id=request.user.id)
-    return render(request, "biblioteca/meus_livros.html", {"livros": livros})
-
 def detalhar_livro(request, id_livro):
     livro = get_object_or_404(Livro, id=id_livro)
     return render(request, "biblioteca/detalhar_livro.html", {"livro": livro})
@@ -39,6 +36,12 @@ def pesquisa(request):
     
     return render(request, "biblioteca/pesquisa.html", {"livros": livros})
 
+@login_required
+def meus_livros(request):
+    livros = Livro.objects.filter(favoritos__id=request.user.id)
+    return render(request, "biblioteca/meus_livros.html", {"livros": livros})
+
+@login_required
 def favoritar(request, id_livro):
     if request.POST:
         livro = get_object_or_404(Livro, id=id_livro)
@@ -52,4 +55,3 @@ def favoritar(request, id_livro):
         messages.erros(request, "Falha ao favoritar o livro!")
 
     return redirect("biblioteca:meus-livros")
-

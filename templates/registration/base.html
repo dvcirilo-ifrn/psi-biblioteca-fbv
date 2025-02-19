@@ -10,6 +10,16 @@
   </head>
   <body class="d-flex align-items-center justify-content-center min-vh-100 bg-light">
     <div class="card shadow-lg p-4 rounded w-100 m-4" style="max-width: 30rem;">
+      {% if messages %}
+      <div>
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      </div>
+      {% endif %}
       <h1 class="text-center py-4 fw-bold mb-4 align-items-center border-bottom">
         <a class="text-decoration-none" href="{% url 'biblioteca:index' %}">
           <i class="bi-book-half" style="color: blue;"></i>
