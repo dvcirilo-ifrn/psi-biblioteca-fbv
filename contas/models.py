@@ -8,13 +8,15 @@ class Usuario(AbstractUser):
         upload_to="usuarios/avatar/",
         blank=True
     )
-    nascimento = models.DateField() 
+    nascimento = models.DateField(blank=True, null=True) 
 
     def __str__(self):
         return self.first_name
     
     @property # permite acessar o método como uma propriedade, sem ()
     def idade(self):
+        if not self.nascimento:
+            return "-"
         hoje = timezone.localdate()
         # defeito: pra quem nasceu no dia 29/02, só atualiza no dia 01/03
         return hoje.year - self.nascimento.year - ((hoje.month, hoje.day) < (self.nascimento.month, self.nascimento.day))

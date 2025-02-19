@@ -106,6 +106,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Autenticação
 AUTH_USER_MODEL = "contas.Usuario"
+LOGIN_URL = "login"
+LOGOUT_REDIRECT_URL = "biblioteca:index"
+LOGIN_REDIRECT_URL = "biblioteca:index"
+
+# Backend de emails para desenvolvimento
+# Apenas imprime o conteúdo do email no terminal
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
 # Internationalization

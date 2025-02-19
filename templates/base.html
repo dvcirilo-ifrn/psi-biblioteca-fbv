@@ -16,14 +16,14 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand fs-4" href="{% url 'index' %}">
+          <a class="navbar-brand fs-4" href="{% url 'biblioteca:index' %}">
             <i class="bi-book-half" style="color: blue; height: 80;"></i>
             Biblioteca
           </a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Início</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'biblioteca:index' %}">Início</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Livros</a>
@@ -53,15 +53,19 @@
               {% endif %}
             </a>
             <ul class="dropdown-menu text-small shadow mt-2 dropdown-menu-end" style="">
-              <li><a class="dropdown-item" href="#">Perfil</a></li>
-              <li><a class="dropdown-item" href="#">Alterar Senha</a></li>
+              <li><a class="dropdown-item" href="{% url 'perfil' %}">Perfil</a></li>
+              <li><a class="dropdown-item" href="{% url 'password_change' %}">Alterar Senha</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><button class="dropdown-item" type="submit">Sair</button></li>
+              <li>
+                <form action="{% url 'logout' %}" method="post">
+                  {% csrf_token %}
+                  <button class="dropdown-item" type="submit">Sair</button></li>
+                </form>
             </ul>
           </div>
           {% else %}
           <div class="text-center mt-2 mt-lg-0">
-            <button type="button" class="btn btn-primary">Login</button>
+            <a href="{% url 'login' %}" role="button" class="btn btn-primary">Login</a>
           </div>
           {% endif %}
         </div>

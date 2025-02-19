@@ -4,8 +4,8 @@ from . import views
 # namespace para urls
 # evita conflito de nomes
 # permite usar urls do tipo 'app_name:name'
-# Ex. 'biblioteca:index'
-app_name="biblioteca"
+# Ex. 'dashboard:index'
+app_name="dashboard"
 urlpatterns = [
     path("", views.index, name="index"),
 ]
