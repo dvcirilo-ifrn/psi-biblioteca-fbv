@@ -34,6 +34,12 @@ Material de apoio da disciplina de [Programação de Sistemas para Internet](htt
     - `python manage.py migrate`
 - Crie um *superuser*:
     - `python manage.py createsuperuser`
+- Instale as fixtures (banco de dados inicial de livros)
+    - `python manage.py loaddata livros.json`
+- Baixe as [capas](https://drive.google.com/file/d/1lu0KvmThV-fP-TtD3dtad9BJ9GYZRbmn/view?usp=sharing) e coloque na pasta `media/biblioteca/capas/`
+    - É necessário criar essas pastas;
+    - Precisa estar logado com email escolar para conseguir baixar;
+    - Caso não tenha acesso, é apenas uma pasta com 30 imagens *png* numeradas (`1.png`, `2.png`, etc.);
 - Rode o servidor:
     - `python manage.py runserver`
 
