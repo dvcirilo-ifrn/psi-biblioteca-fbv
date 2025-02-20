@@ -1,1 +1,39 @@
 {% extends "dashboard/base.html" %}
+
+{% block title %}Início{% endblock %}
+
+
+{% block content %}
+<div class="mb-4 border-bottom">
+<h2>Administração da Biblioteca</h2>
+  
+</div>
+
+<!-- Example Content -->
+<div class="row">
+  <div class="col-md-4">
+      <div class="card text-bg-primary mb-3">
+          <div class="card-body">
+              <h5 class="card-title">Usuários</h5>
+              <p class="card-text">Total: {{ num_usuarios }}</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="card text-bg-success mb-3">
+          <div class="card-body">
+              <h5 class="card-title">Livros</h5>
+              <p class="card-text">Total: {{ num_livros }}</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="card text-bg-warning mb-3">
+          <div class="card-body">
+              <h5 class="card-title">Favoritos</h5>
+              <p class="card-text">Total: {{ num_favoritos }}</p>
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}
