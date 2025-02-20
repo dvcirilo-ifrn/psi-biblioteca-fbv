@@ -1,0 +1,36 @@
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Nome Completo</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Favoritos</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for usuario in usuarios %}
+  <tr>
+    <td>
+      {{ usuario.id }} 
+    </td>  
+    <td>
+      {{ usuario.username }} 
+    </td>  
+    <td>
+      {{ usuario.full_name }} 
+    </td>  
+    <td>
+      {{ usuario.idade }} 
+    </td>  
+    <td>
+      {{ livro.livros_set.count }} 
+    </td>  
+    <td>
+      Ações
+    </td>  
+  </tr>
+{% endfor %}
+  </tbody>
+</table>

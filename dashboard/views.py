@@ -17,7 +17,8 @@ def index(request):
     return render(request, "dashboard/index.html", context)
 
 def listar_livros(request):
-    pass
+    livros = Livro.objects.all()
+    return render(request, "dashboard/livros.html", {"livros": livros})
 
 def criar_livro(request):
     pass
@@ -32,7 +33,8 @@ def remover_livro(request):
     pass
 
 def listar_usuarios(request):
-    pass
+    usuarios = Usuario.objects.all()
+    return render(request, "dashboard/usuarios.html", {"usuarios": usuarios})
 
 def criar_usuario(request):
     pass
@@ -47,4 +49,7 @@ def remover_usuario(request):
     pass
 
 def desabilitar_usuario(request):
+    pass
+
+def listar_favoritos(request):
     pass
