@@ -1,0 +1,11 @@
+{% extends "dashboard/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Criar Livro{% endblock %}
+{% block page-title %}<h3 class="display-3">Criar Livro</h3>{% endblock %}
+
+{% block dashboard-content %}
+<div style="min-width: 300px;">
+  {% include "dashboard/partials/_form_livro.html" %}
+</div>
+{% endblock %}

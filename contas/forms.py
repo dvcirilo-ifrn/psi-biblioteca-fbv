@@ -9,6 +9,9 @@ class CadastroForm(UserCreationForm):
         # no UserCreationForm
         fields = ['username', 'email'] 
 
+class UsuarioCreationForm(UserCreationForm):
+    pass
+
 class UsuarioChangeForm(UserChangeForm):
     password = None
 

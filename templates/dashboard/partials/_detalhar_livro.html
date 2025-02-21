@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col">
+    <h3>{{livro.titulo}}</h3>
+    <p>Autor: {{livro.autor}}</p>
+    <p>Ano: {{livro.ano}}</p>
+    <p>Gênero: {{livro.get_genero_display}}</p>
+    <p>Favoritos: {{livro.favoritos.count}}</p>
+    <a href="{% url 'dashboard:livros' %}">Voltar</a>
+    <a href="{% url 'dashboard:editar-livro' livro.id %}">Editar</a>
+    <a href="{% url 'dashboard:remover-livro' livro.id %}">Remover</a>
+  </div>
+  <div class="col">
+    <img src="{{ livro.capa.url }}" width=300 alt="capa">
+  </div>
+</div>

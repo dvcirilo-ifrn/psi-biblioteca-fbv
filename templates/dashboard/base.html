@@ -4,9 +4,9 @@
 {% block title %}Início{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid h-100">
   <div class="row">
-    <aside class="col col-md-2 bg-body-secondary">  <!-- sidebar -->
+    <aside class="col col-md-2 bg-body-secondary position-sticky top-0">  <!-- sidebar -->
       <ul class="nav nav-pills flex-column mb-auto">
         <li>
           <a href="{% url 'dashboard:index' %}" class="nav-link{% if request.resolver_match.url_name == 'index' %} active{% else %} link-body-emphasis{% endif %}">
