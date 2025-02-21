@@ -1,4 +1,4 @@
-# Exemplo de CRUD com AJAX no Django
+# Exemplo de CRUD no Django
 Material de apoio da disciplina de [Programação de Sistemas para Internet](https://dvcirilo.github.io/psi-ifrn) do IFRN - Campus São Paulo do Potengi.
 
 ## Informações
@@ -9,12 +9,10 @@ Material de apoio da disciplina de [Programação de Sistemas para Internet](htt
     - O usuário comum logado pode adicionar/remover livros aos seus favoritos;
     - O usuário comum logado pode listar seus favoritos;
     - O administrador pode gerenciar livros e usuários.
-- O objetivo é demonstrar o uso do AJAX com [Django](https://www.djangoproject.com/);
+- O objetivo é demonstrar um projeto [Django](https://www.djangoproject.com/) com autenticação;
 
 ## Implementação
 - *Front-end* feito usando apenas blocos de exemplo do [Bootstrap 5](https://getbootstrap.com/);
-- [*jQuery*](https://jquery.com/) para manipulação do DOM e requisições;
-    - Perspectiva de mudar para JS "*Vanilla*";
 - *Back-end* seguindo os exemplos da documentação do Django e usando FBVs (*Function Based Views*)
 - Nomenclatura em português para facilitar a compreensão;
 - Pastas de `templates` e `static` na raiz, com sub-pastas para cada *app*, evitando conflitos;
