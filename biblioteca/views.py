@@ -28,15 +28,22 @@ def detalhar_livro(request, id_livro):
 def pesquisa(request):
     pesquisa = request.GET.get("q")
     if pesquisa:
+        # pesquisa nos autores
         livros_autor = Livro.objects.filter(autor__icontains=pesquisa)
+        # pesquisa nos títulos
         livros_titulo = Livro.objects.filter(titulo__icontains=pesquisa)
+        # pesquisa na sinopse
         livros_sinopse = Livro.objects.filter(sinopse__icontains=pesquisa)
+        # junta os 3 resultados
         livros = livros_autor | livros_titulo | livros_sinopse
-        livros.distinct()
+        # retira os resultados duplicados
+        livros.distinct() 
     
-    paginator = Paginator(livros, 6)
-    numero_da_pagina = request.GET.get('p')  # Pega o número da página da URL
-    livros_paginados = paginator.get_page(numero_da_pagina)  # Pega a página específica
+        paginator = Paginator(livros, 6)
+        numero_da_pagina = request.GET.get('p')  # Pega o número da página da URL
+        livros_paginados = paginator.get_page(numero_da_pagina)  # Pega a página específica
+    else:
+        livros_paginados = [] # se não houver termo de pesquisa, retorna nada
     return render(request, "biblioteca/pesquisa.html", {"livros": livros_paginados})
 
 @login_required
